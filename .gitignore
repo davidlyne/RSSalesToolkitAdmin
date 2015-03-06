@@ -42,3 +42,9 @@ Network Trash Folder
 Temporary Items
 .apdisk
 /nbproject/private/
+*.pdf
+ProductImages/100_1_rooms.jpg
+*.png
+*.jpg
+*.gif
+ProductImages/45_1_installlog.txt
