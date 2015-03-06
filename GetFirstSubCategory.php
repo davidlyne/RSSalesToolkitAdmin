@@ -10,9 +10,9 @@ if (!isset($parentid) || !is_numeric($parentid))
 else {
 
 	$options = "";
-	$result = mysql_query("SELECT * FROM producthighlightscategory WHERE Parent=".$parentid);
+	$result = Database::Query("SELECT * FROM producthighlightscategory WHERE Parent=".$parentid);
 	$i=0;
-	$row = mysql_fetch_array($result);
+	$row = Database::FetchArray($result);
 	$options = $row["ID"];
 
 	

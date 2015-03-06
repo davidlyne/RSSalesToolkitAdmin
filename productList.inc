@@ -70,8 +70,8 @@ function updateCat2(selectObj)
 		else
 			echo "<option value='0' selected >ALL</option>";	
 			
-		$result = mysql_query("SELECT * FROM producthighlightscategory WHERE Parent=0");
-		while($row = mysql_fetch_array($result))
+		$result = Database::Query("SELECT * FROM producthighlightscategory WHERE Parent=0");
+		while($row = Database::FetchArray($result))
 		{
 			echo "<option value='".$row["ID"]."'";
 			if ($catfilter1 == $row["ID"])
@@ -104,8 +104,8 @@ function updateCat2(selectObj)
 			else
 				echo "<option value='0' selected >ALL</option>";	
 				
-			$result = mysql_query("SELECT * FROM producthighlightscategory WHERE Parent='$catfilter1'");
-			while($row = mysql_fetch_array($result))
+			$result = Database::Query("SELECT * FROM producthighlightscategory WHERE Parent='$catfilter1'");
+			while($row = Database::FetchArray($result))
 			{
 				echo "<option value='".$row["ID"]."'";
 				if ($catfilter2 == $row["ID"])
@@ -133,13 +133,13 @@ function updateCat2(selectObj)
             </thead>
 			 <?php
 				if ($catfilter1 <= 0 && $catfilter2 <= 0)
-					$result = mysql_query("SELECT * FROM producthighlightsproduct ORDER BY Category ");
+					$result = Database::Query("SELECT * FROM producthighlightsproduct ORDER BY Category ");
 				else if ($catfilter1 > 0 && $catfilter2 <= 0)
-					$result = mysql_query("SELECT * FROM producthighlightsproduct WHERE Category='$catfilter1' ORDER BY Category2 ");
+					$result = Database::Query("SELECT * FROM producthighlightsproduct WHERE Category='$catfilter1' ORDER BY Category2 ");
 				else
-					$result = mysql_query("SELECT * FROM producthighlightsproduct WHERE Category='$catfilter1' AND Category2='$catfilter2' ORDER BY Name ");
+					$result = Database::Query("SELECT * FROM producthighlightsproduct WHERE Category='$catfilter1' AND Category2='$catfilter2' ORDER BY Name ");
 				$odd = 0;
-				 while($row = mysql_fetch_array($result))
+				 while($row = Database::FetchArray($result))
 				 {
 				 	if ($odd)
 						echo "<tr>";

@@ -3,12 +3,12 @@ header('Content-Type: application/xml');
 require_once("common.inc");
 
 echo "<ProductList>\n";
-$result = mysql_query("SELECT * FROM producthighlightsproduct");
+$result = Database::Query("SELECT * FROM producthighlightsproduct");
 $currentURL = "http://$_SERVER[HTTP_HOST]";
 echo "<NumProducts>".getNumProducts()."</NumProducts>\n";
 
 
- while($row = mysql_fetch_array($result))
+ while($row = Database::FetchArray($result))
  {
 	echo "<Product>\n";
 	echo "<Name>".htmlspecialchars($row['Name'])."</Name>\n";

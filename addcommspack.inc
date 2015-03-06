@@ -6,8 +6,8 @@
 	if (array_key_exists("EDITCOMMSPACK",$_GET) == TRUE)
 	{
 		$editid = $_GET["EDITCOMMSPACK"];	
-		$result = mysql_query("SELECT * FROM producthighlightscommspack WHERE ID=$editid");
-		$row = mysql_fetch_array($result);
+		$result = Database::Query("SELECT * FROM producthighlightscommspack WHERE ID=$editid");
+		$row = Database::FetchArray($result);
 		$commspackname = $row["Name"];
 		$pdf = $row["PDF"];
 		$cat = $row["Category"];
@@ -93,8 +93,8 @@ function validateForm() {
 			<label for="commspackcat">Comms Pack Category</label>
 			<select name="commspackcat" id="commspackcat">
 			<?php
-			$result = mysql_query("SELECT * FROM producthighlightscategory WHERE Parent=0");
-			while($row = mysql_fetch_array($result))
+			$result = Database::Query("SELECT * FROM producthighlightscategory WHERE Parent=0");
+			while($row = Database::FetchArray($result))
 			{
 				echo "<option value='".$row["ID"]."'";
 				if ($editid > 0 && $cat == $row["ID"])

@@ -24,9 +24,9 @@ if (!isset($parentid) || !is_numeric($parentid))
 else {
 
 	$options = "";
-	$result = mysql_query("SELECT * FROM producthighlightscategory WHERE Parent=".$parentid);
+	$result = Database::Query("SELECT * FROM producthighlightscategory WHERE Parent=".$parentid);
 	$i=0;
-	while($row = mysql_fetch_array($result))
+	while($row = Database::FetchArray($result))
 	{
 		$options .= '<option value="'. $row["ID"] .'"';
 		if ($row["ID"] == $selectid && $doselection > 0)

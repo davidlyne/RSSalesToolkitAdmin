@@ -30,14 +30,14 @@
 
 		
 		
-		$result = mysql_query("SELECT * FROM producthighlightscategory WHERE Parent=0");
+		$result = Database::Query("SELECT * FROM producthighlightscategory WHERE Parent=0");
 		
 		if ($catfilter > 0)
 			echo "<option value='0'>ALL</option>";
 		else
 			echo "<option value='0' selected >ALL</option>";		
 			
-		while($row = mysql_fetch_array($result))
+		while($row = Database::FetchArray($result))
 		{
 			echo "<option value='".$row["ID"]."'";
 			if ($catfilter == $row["ID"])
@@ -79,12 +79,12 @@
             </thead>
 			 <?php
 				if ($catfilter > 0)
-					$result = mysql_query("SELECT * FROM producthighlightscommspack WHERE Category='$catfilter' ORDER BY Name ");
+					$result = Database::Query("SELECT * FROM producthighlightscommspack WHERE Category='$catfilter' ORDER BY Name ");
 				else
-					$result = mysql_query("SELECT * FROM producthighlightscommspack ORDER BY Category");
+					$result = Database::Query("SELECT * FROM producthighlightscommspack ORDER BY Category");
 			
 				$odd = 1;
-				 while($row = mysql_fetch_array($result))
+				 while($row = Database::FetchArray($result))
 				 {
 				 	if ($odd)
 						echo "<tr>";

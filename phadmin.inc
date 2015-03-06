@@ -27,7 +27,7 @@
 				if (array_key_exists("DELETECOMMSPACK",$_GET) == TRUE)
 				{
 					$id = $_GET["DELETECOMMSPACK"];
-					mysql_query("DELETE FROM producthighlightscommspack WHERE ID=".$id); 
+					Database::Query("DELETE FROM producthighlightscommspack WHERE ID=".$id); 
 				}
 				
 				include "commspacklist.inc";
@@ -54,7 +54,7 @@
 				if (array_key_exists("DELETEPRODUCT",$_GET) == TRUE)
 				{
 					$id = $_GET["DELETEPRODUCT"];
-					mysql_query("DELETE FROM producthighlightsproduct WHERE ID=".$id); 
+					Database::Query("DELETE FROM producthighlightsproduct WHERE ID=".$id); 
 				}
 				
 				include "productlist.inc";
@@ -73,8 +73,8 @@
 			case "DELETECOMMSPACK":
 			{
 				$deleteid = $_GET["DELETECOMMSPACK"];
-				$result = mysql_query("SELECT * FROM producthighlightscommspack WHERE ID=$deleteid");
-				$row = mysql_fetch_array($result);
+				$result = Database::Query("SELECT * FROM producthighlightscommspack WHERE ID=$deleteid");
+				$row = Database::FetchArray($result);
 				$commspackname = $row["Name"];
 					
 				?>
@@ -103,8 +103,8 @@
 			case "DELETEPRODUCT":
 			{
 				$deleteid = $_GET["DELETEPRODUCT"];
-				$result = mysql_query("SELECT * FROM producthighlightsproduct WHERE ID=$deleteid");
-				$row = mysql_fetch_array($result);
+				$result = Database::Query("SELECT * FROM producthighlightsproduct WHERE ID=$deleteid");
+				$row = Database::FetchArray($result);
 				$productname = $row["Name"];
 					
 				?>
@@ -133,8 +133,8 @@
 			case "DELETECATEGORY":
 			{
 				$deleteid = $_GET["DELETECATEGORY"];
-				$result = mysql_query("SELECT * FROM producthighlightscategory WHERE ID=$deleteid");
-				$row = mysql_fetch_array($result);
+				$result = Database::Query("SELECT * FROM producthighlightscategory WHERE ID=$deleteid");
+				$row = Database::FetchArray($result);
 				$catname = $row["Name"];
 					
 				?>
@@ -171,8 +171,8 @@
 				if (array_key_exists("ID",$_GET) == TRUE)
 				{
 					$editid = $_GET["ID"];
-					$result = mysql_query("SELECT * FROM producthighlightscategory WHERE ID=$editid");
-					$row = mysql_fetch_array($result);
+					$result = Database::Query("SELECT * FROM producthighlightscategory WHERE ID=$editid");
+					$row = Database::FetchArray($result);
 					$catname = $row["Name"];
 					echo '<h1>Edit Product Highlights Category</h1>';
 				}else
@@ -215,8 +215,8 @@
 				$i=0;
 				while ($breadcrumb != 0)
 				{
-					$result = mysql_query("SELECT * FROM producthighlightscategory WHERE ID=$breadcrumb");
-					$row = mysql_fetch_array($result);
+					$result = Database::Query("SELECT * FROM producthighlightscategory WHERE ID=$breadcrumb");
+					$row = Database::FetchArray($result);
 					
 					$breadcrumb = $row["Parent"];
 					$breadcrumbs[$i] = $row["ID"];
@@ -242,8 +242,8 @@
 				for ($j = $i-1;$j>=0;$j--)
 				{
 					$id = $breadcrumbs[$j];
-					$result = mysql_query("SELECT * FROM producthighlightscategory WHERE ID=$id");
-					$row = mysql_fetch_array($result);
+					$result = Database::Query("SELECT * FROM producthighlightscategory WHERE ID=$id");
+					$row = Database::FetchArray($result);
 					
 					$active = "";
 					if ($currentCategory == $id)
@@ -264,23 +264,23 @@
 					// insert new category
 					$catname = $_GET["CATEGORYNAME"];
 					$parentid = $currentCategory;
-					mysql_query("INSERT INTO producthighlightscategory (Name, Parent) VALUES('$catname', '$parentid' ) "); 
+					Database::Query("INSERT INTO producthighlightscategory (Name, Parent) VALUES('$catname', '$parentid' ) "); 
 				}else if (array_key_exists("CATEGORYNAME",$_GET) == TRUE && array_key_exists("EDITCATEGORYID",$_GET) == TRUE )
 				{
 					// update category
 					$catname = $_GET["CATEGORYNAME"];
 					$catid = $_GET["EDITCATEGORYID"];
 					
-					mysql_query("UPDATE producthighlightscategory SET Name='$catname' WHERE ID='$catid'"); 
+					Database::Query("UPDATE producthighlightscategory SET Name='$catname' WHERE ID='$catid'"); 
 				} 
 				
 				if (array_key_exists("DELETECATEGORY",$_GET) == TRUE)
 				{
 					$id = $_GET["DELETECATEGORY"];
-					mysql_query("DELETE FROM producthighlightscategory WHERE ID=".$id); 
+					Database::Query("DELETE FROM producthighlightscategory WHERE ID=".$id); 
 				}
 				
-				 $result = mysql_query("SELECT * FROM producthighlightscategory WHERE Parent=$currentCategory");
+				 $result = Database::Query("SELECT * FROM producthighlightscategory WHERE Parent=$currentCategory");
 				?>
 				<table>
 				<thead>
@@ -293,7 +293,7 @@
 			
 					
 				 <?php
-				 while($row = mysql_fetch_array($result))
+				 while($row = Database::FetchArray($result))
 				 {
 					$numSubCats = getNumSubCategories($row['ID']);
 					echo "<tr>";					

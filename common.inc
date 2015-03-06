@@ -1,11 +1,8 @@
 <?php
 
         require 'UserDB.php';
-
-	$standardUsername = "RSComponents";
-	$standardPassword = "test1";	
-	$adminUsername = "admin";
-	$adminPassword = "test2";
+        require 'Database.php';
+        
 	
 	$adminPage = basename($_SERVER['PHP_SELF']);
 	$productHighlightsTop = $adminPage."?NAV=PHADMIN";
@@ -25,10 +22,6 @@
 	$supplieropportunities = $adminPage."?NAV=SOADMIN&SOTOOL=SUPPLIEROPPORTUNITIESLIST";
 	$supplieropportunitiesEdit = $adminPage."?NAV=SOADMIN&SOTOOL=SUPPLIEROPPORTUNITIESEDIT";
 	
-	$dbname = "salestoolkit";
-	$servername = "localhost";
-	$username = "root";
-	$password = "password";
 	
 	$designTools = [
     0 => "DS PCB",
@@ -39,8 +32,7 @@
 	5 => "DS DesignShare",
 	];
 
-	$link = mysql_connect($servername, $username);
-	mysql_select_db($dbname, $link);
+        Database::connect();
 	
 	$phtool = "";
 	if (array_key_exists("PHTOOL",$_GET))
@@ -103,24 +95,24 @@
 	}
 			
 	function getNumSubCategories($catid)
-	{
-		$result=mysql_query("SELECT count(*) as total from producthighlightscategory WHERE Parent='$catid'");
-		$data=mysql_fetch_assoc($result);
-		return $data['total'];
+	{  
+		$result=Database::Query("SELECT COUNT(*) FROM producthighlightscategory WHERE Parent='$catid'");
+		$row = Database::FetchRow($result);
+		return $row[0];
 	}
 	
 	function getNumProducts()
 	{
-		$result=mysql_query("SELECT count(*) as total from producthighlightsproduct");
-		$data=mysql_fetch_assoc($result);
-		return $data['total'];
+            	$result=Database::Query("SELECT COUNT(*) FROM producthighlightsproduct");
+		$row = Database::FetchRow($result);
+		return $row[0];
 	}
 	
 	function getNumCommsPacks()
 	{
-		$result=mysql_query("SELECT count(*) as total from producthighlightscommspack");
-		$data=mysql_fetch_assoc($result);
-		return $data['total'];
+                $result=Database::Query("SELECT COUNT(*) FROM producthighlightscommspack");
+		$row = Database::FetchRow($result);
+		return $row[0];
 	}
 	
 	function getBoolYesNo($valin)
@@ -138,15 +130,15 @@
 	}
 	function getCategoryName($catid)
 	{
-		$result=mysql_query("SELECT * from producthighlightscategory WHERE ID='$catid'");
-		$data=mysql_fetch_array($result);
+		$result=Database::Query("SELECT * from producthighlightscategory WHERE ID='$catid'");
+		$data=Database::FetchArray($result);
 		return strtoupper($data['Name']);
 	}
 	
 	function getProductCategoryPath($productid)
 	{
-		$result = mysql_query("SELECT * FROM producthighlightsproduct WHERE ID=".$productid);
-		$row = mysql_fetch_array($result);
+		$result = Database::Query("SELECT * FROM producthighlightsproduct WHERE ID=".$productid);
+		$row = Database::FetchArray($result);
 		$cat1 = $row['Category'];
 		$cat2 = $row['Category2'];
 		
@@ -155,8 +147,8 @@
 	
 	function getCommsPackCategoryPath($commspackid)
 	{
-		$result = mysql_query("SELECT * FROM producthighlightscommspack WHERE ID=".$commspackid);
-		$row = mysql_fetch_array($result);
+		$result = Database::Query("SELECT * FROM producthighlightscommspack WHERE ID=".$commspackid);
+		$row = Database::FetchArray($result);
 		$cat1 = $row['Category'];
 		
 		return getCategoryName($cat1);
@@ -404,12 +396,13 @@
 			$sql = 	"INSERT INTO producthighlightsproduct (	Category, Category2, Name, Brand, StockNo, Published, ShortDesc, LongDesc, URL, Timestamp, Updated  ) VALUES('$cat1','$cat2','$name','$brand','$stockNo','$published','$shortDesc','$longDesc','$url','$t','$t')";
 		}
 		
-		mysql_query($sql); 
+                
+		Database::Query($sql); 
 		
 		if ($editid > 0)
 			$id = $editid;
 		else
-			$id = mysql_insert_id();
+			$id = Database::GetInsertID();
 			
 		if ($mainImageFilename != "")
 		{
@@ -420,7 +413,7 @@
 			{
 
 				$target = resizeImage($target);
-				mysql_query("UPDATE producthighlightsproduct SET Image1='$target' WHERE ID='$id'"); 
+				Database::Query("UPDATE producthighlightsproduct SET Image1='$target' WHERE ID='$id'"); 
 
 			}
 
@@ -434,7 +427,7 @@
 			if(move_uploaded_file($_FILES['second-image']['tmp_name'], $target))
 			{
 				$target = resizeImage($target);
-				mysql_query("UPDATE producthighlightsproduct SET Image2='$target' WHERE ID='$id'"); 
+				Database::Query("UPDATE producthighlightsproduct SET Image2='$target' WHERE ID='$id'"); 
 
 			}
 
@@ -448,7 +441,7 @@
 			if(move_uploaded_file($_FILES['third-image']['tmp_name'], $target))
 			{
 				$target = resizeImage($target);
-				mysql_query("UPDATE producthighlightsproduct SET Image3='$target' WHERE ID='$id'"); 
+				Database::Query("UPDATE producthighlightsproduct SET Image3='$target' WHERE ID='$id'"); 
 
 			}
 
@@ -488,12 +481,12 @@
 			$sql = 	"INSERT INTO producthighlightscommspack (	Category, Name, Timestamp, Updated ) VALUES('$cat1','$name','$t','$t')";
 		}
 		
-		mysql_query($sql); 
+		Database::Query($sql); 
 		
 		if ($editid > 0)
 			$id = $editid;
 		else
-			$id = mysql_insert_id();
+			$id = Database::GetInsertID ();
 			
 		if ($pdfFilename != "")
 		{
@@ -503,7 +496,7 @@
 			if(move_uploaded_file($_FILES['pdf']['tmp_name'], $target))
 			{
 
-				mysql_query("UPDATE producthighlightscommspack SET PDF='$target' WHERE ID='$id'"); 
+				Database::Query("UPDATE producthighlightscommspack SET PDF='$target' WHERE ID='$id'"); 
 
 			}
 
@@ -515,15 +508,15 @@
 	
 	function doesSupplierOpportunitiesExist($editid=0)
 	{
-		$result=mysql_query("SELECT * from supplieropportunities WHERE ID='$editid'");
-		$num_rows = mysql_num_rows($result);
-		return $num_rows > 0;
+            	$result=Database::Query("SELECT COUNT(*) FROM supplieropportunities WHERE ID='$editid'");
+		$row = Database::FetchRow($result);
+		return $row[0] > 0;
 	}
 	
 	function getSupplierOpportunitiesPDF($id=0)
 	{
-		$result=mysql_query("SELECT * from supplieropportunities WHERE ID='$id'");
-		$row = mysql_fetch_array($result);
+		$result=Database::Query("SELECT * from supplieropportunities WHERE ID='$id'");
+		$row = Database::FetchArray($result);
 		return $row["PDF"];
 	}
 	
@@ -547,9 +540,9 @@
 		{	
 
 			if ($insertid > 0)
-				mysql_query("INSERT INTO supplieropportunities ( ID, PDF,Timestamp, Updated ) VALUES('$editid','$target','$t','$t')"); 
+				Database::Query("INSERT INTO supplieropportunities ( ID, PDF,Timestamp, Updated ) VALUES('$editid','$target','$t','$t')"); 
 			else
-				mysql_query("UPDATE supplieropportunities SET PDF='$target', Updated = '$t'  WHERE ID='$editid'"); 
+				Database::Query("UPDATE supplieropportunities SET PDF='$target', Updated = '$t'  WHERE ID='$editid'"); 
 
 		}else
 		{

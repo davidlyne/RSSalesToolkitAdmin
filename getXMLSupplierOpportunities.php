@@ -3,7 +3,7 @@ header('Content-Type: application/xml');
 require_once("common.inc");
 
 echo "<SupplierOpportunitiesList>\n";
-$result = mysql_query("SELECT * FROM supplieropportunities");
+$result = Database::Query("SELECT * FROM supplieropportunities");
 $currentURL = "http://$_SERVER[HTTP_HOST]";
 
 

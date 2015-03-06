@@ -6,8 +6,8 @@
 	if (array_key_exists("EDITPRODUCT",$_GET) == TRUE)
 	{
 		$editid = $_GET["EDITPRODUCT"];	
-		$result = mysql_query("SELECT * FROM producthighlightsproduct WHERE ID=$editid");
-		$row = mysql_fetch_array($result);
+		$result = Database::Query("SELECT * FROM producthighlightsproduct WHERE ID=$editid");
+		$row = Database::FetchArray($result);
 		$productname = $row["Name"];
 		$productStockNo = $row["StockNo"];
 		$productBrand = $row["Brand"];
@@ -142,8 +142,8 @@ function validateForm() {
 			<label for="productcat">Product Category</label>
 			<select name="productcat" id="productcat">
 			<?php
-			$result = mysql_query("SELECT * FROM producthighlightscategory WHERE Parent=0");
-			while($row = mysql_fetch_array($result))
+			$result = Database::Query("SELECT * FROM producthighlightscategory WHERE Parent=0");
+			while($row = Database::FetchArray($result))
 			{
 				echo "<option value='".$row["ID"]."'";
 				if ($editid > 0 && $cat1 == $row["ID"])
