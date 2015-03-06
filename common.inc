@@ -1,4 +1,7 @@
 <?php
+
+        require 'UserDB.php';
+
 	$standardUsername = "RSComponents";
 	$standardPassword = "test1";	
 	$adminUsername = "admin";
@@ -73,14 +76,10 @@
 	
 	if (array_key_exists("LOGIN",$_POST) == TRUE)
 	{
-		$username2 = $_POST["username"];
-		$password2 = $_POST["password"];
 		
-		if ($username2 == $adminUsername && $password2 == $adminPassword)
-			$permissionLevel = 2;
-		else if ($username2 == $standardUsername && $password2 == $standardPassword)
-			$permissionLevel = 1;
-		else
+                $permissionLevel = UserDB::getPermissionLevel();
+                
+		if ($permissionLevel <= 0)
 		{
 			$loginFailure = 1;
 			$nav = "";
