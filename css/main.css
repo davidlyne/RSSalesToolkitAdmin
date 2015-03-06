@@ -1,0 +1,167 @@
+body{background: #e9e4e4; color: #494f55; font-family: 'Lato'; font-weight:300; font-size: 1.25em}
+h1{color: #c70017; font-size: 1.5em; font-weight: 300; text-transform: uppercase; padding: 0 0 1em 0}
+.intro{width:100%; margin: 0 0 2.5em; padding: 0 0 2.5em 0; font-size: 0.85em; border-bottom:1px solid #CCC;}
+.wrapper{width:100%; max-width: 60em; margin: 0 auto; padding: 2em 0}
+.branding{padding:1em 0; background: #c70017; color: #c70017; text-align: center}
+.branding img{width: 3em}
+.product-details-input{width: 100%; float: left}
+form{padding: 0 0 4em 0}
+form ul{margin: 0; padding: 0}
+form li{list-style: none; margin: 0; padding: 0 0 1em 0}
+form label{width:100%; float:left; margin: 0 0 0.5em 0; clear:both; text-transform: uppercase; font-size:0.65em;}
+form input, form select, form textarea{width: 100%; padding: 0.5em}
+form textarea{height: 6em}
+form input[type="radio"]{width: auto; margin: 0 0.5em 0 0;}
+form input[type="file"]{margin: 0; padding: 0; font-size: 0.75em}
+form button{background: #c70017; color: #FFF; font-weight: 300; font-size:0.8em; text-transform: uppercase; border: none; border-radius: 4px; padding: 1em 1.5em;}
+form button:hover{background: #000;}
+.left-inputs{width:44%; float: left}
+.right-inputs{width:44%; float: right}
+table{width:100%; float: left; margin:0 0 4em 0; text-align: left}
+table th{border-bottom: 1px solid #CCC; margin: 0 0 1em 0; padding: 0 0 1em 0; text-transform: uppercase;}
+table td{padding: 0.25em}
+table button{background: #8db634; color: #FFF; border: none; font-size:0.75em; border-radius: 2px; padding: .5em 0.75em; font-weight: 600}
+table button:hover{background: #000}
+table tr{font-size: 0.75em;}
+table button.edit{background: #3c731d}
+table button.edit:hover{background: #000}
+table button.delete{background: #c70017}
+table button.delete:hover{background: #000}
+
+button.add{background: #8db634; color: #FFF; border: none; font-size:0.75em; border-radius: 2px; padding: .5em 0.75em; font-weight: 600}
+button.add:hover{background: #000}
+.search-products{width:40%; float: left; padding: 0 0 1.5em 0}
+.login{background: #000; color: #FFF;}
+.login form{width:30%; margin:0 auto; padding: 2em 0 0 0; text-align: center;}
+.login form input{color: #000}
+.login form label{font-weight: 200; text-align: left}
+.login h1{color: #FFF; font-size: 1.5em; font-weight: 300; text-transform: uppercase;}
+.login button{background:#3c731d; margin: 1em 0 0 0}
+.login button:hover{background: #557412 }
+.login a:last-child{color: #CCC; font-size: 0.8em}
+
+
+.breadcrumb {
+	/*centering*/
+	display: inline-block;
+	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.35);
+	overflow: hidden;
+	border-radius: 5px;
+
+}
+
+.breadcrumb a {
+	text-decoration: none;
+	outline: none;
+	display: block;
+	float: left;
+	font-size: 12px;
+	line-height: 36px;
+	color: white;
+	/*need more margin on the left of links to accomodate the numbers*/
+	padding: 0 10px 0 30px;
+	background: #666;
+	background: linear-gradient(#666, #333);
+	position: relative;
+}
+/*since the first link does not have a triangle before it we can reduce the left padding to make it look consistent with other links*/
+.breadcrumb a:first-child {
+	padding-left: 46px;
+	border-radius: 5px 0 0 5px; /*to match with the parent's radius*/
+}
+.breadcrumb a:first-child:before {
+	left: 14px;
+}
+.breadcrumb a:last-child {
+	border-radius: 0 5px 5px 0; /*this was to prevent glitches on hover*/
+	padding-right: 20px;
+}
+
+/*hover/active styles*/
+.breadcrumb a.active, .breadcrumb a:hover{
+	background: #333;
+	background: linear-gradient(#333, #000);
+}
+.breadcrumb a.active:after, .breadcrumb a:hover:after {
+	background: #333;
+	background: linear-gradient(135deg, #333, #000);
+}
+
+/*adding the arrows for the breadcrumbs using rotated pseudo elements*/
+.breadcrumb a:after {
+	content: '';
+	position: absolute;
+	top: 0; 
+	right: -18px; /*half of square's length*/
+	/*same dimension as the line-height of .breadcrumb a */
+	width: 36px; 
+	height: 36px;
+	/*as you see the rotated square takes a larger height. which makes it tough to position it properly. So we are going to scale it down so that the diagonals become equal to the line-height of the link. We scale it to 70.7% because if square's: 
+	length = 1; diagonal = (1^2 + 1^2)^0.5 = 1.414 (pythagoras theorem)
+	if diagonal required = 1; length = 1/1.414 = 0.707*/
+	transform: scale(0.707) rotate(45deg);
+	/*we need to prevent the arrows from getting buried under the next link*/
+	z-index: 1;
+	/*background same as links but the gradient will be rotated to compensate with the transform applied*/
+	background: #666;
+	background: linear-gradient(135deg, #666, #333);
+	/*stylish arrow design using box shadow*/
+	box-shadow: 
+		2px -2px 0 2px rgba(0, 0, 0, 0.4), 
+		3px -3px 0 2px rgba(255, 255, 255, 0.1);
+	/*
+		5px - for rounded arrows and 
+		50px - to prevent hover glitches on the border created using shadows*/
+	border-radius: 0 5px 0 50px;
+}
+/*we dont need an arrow after the last link*/
+.breadcrumb a:last-child:after {
+	content: none;
+}
+/*we will use the :before element to show numbers*/
+
+
+.flat a, .flat a:after {
+	background: white;
+	color: black;
+	transition: all 0.5s;
+}
+.flat a:before {
+	background: white;
+	box-shadow: 0 0 0 1px #ccc;
+}
+.flat a:hover, .flat a.active, 
+.flat a:hover:after, .flat a.active:after{
+	background: #c70017;
+}
+
+input[type=checkbox].css-checkbox {
+		position:absolute; z-index:-1000; left:-1000px; overflow: hidden; clip: rect(0 0 0 0); height:1px; width:1px; margin:-1px; padding:0; border:0;
+	}
+
+input[type=checkbox].css-checkbox + label.css-label {
+	padding-left:23px;
+	height:18px; 
+	display:inline-block;
+	line-height:18px;
+	background-repeat:no-repeat;
+	background-position: 0 0;
+	font-size:18px;
+	vertical-align:middle;
+	cursor:pointer;
+
+}
+
+input[type=checkbox].css-checkbox:checked + label.css-label {
+	background-position: 0 -18px;
+}
+	
+label.css-label {
+background-image:url(http://csscheckbox.com/checkboxes/u/csscheckbox_c251392864a556c83a48332c6f12583f.png);
+-webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}

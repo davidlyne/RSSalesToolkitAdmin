@@ -1,0 +1,603 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"mr",
+				"margin-bottom"
+			],
+			[
+				"font",
+				"font-style"
+			],
+			[
+				"mar",
+				"margin"
+			],
+			[
+				"min",
+				"min-height"
+			],
+			[
+				"marg",
+				"margin-top"
+			],
+			[
+				"font-s",
+				"font-style"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"case",
+				"case-study"
+			],
+			[
+				"border",
+				"border"
+			],
+			[
+				"fot",
+				"font-size"
+			],
+			[
+				"borde",
+				"border-top"
+			],
+			[
+				"pad",
+				"padding"
+			],
+			[
+				"pa",
+				"padding-bottom"
+			],
+			[
+				"ma",
+				"margin"
+			],
+			[
+				"bo",
+				"border-bottom"
+			],
+			[
+				"s",
+				"solid"
+			],
+			[
+				"bor",
+				"border-left"
+			],
+			[
+				"f",
+				"float"
+			],
+			[
+				"padd",
+				"padding-bottom"
+			],
+			[
+				"le",
+				"letter-spacing"
+			],
+			[
+				"tex",
+				"text-decoration"
+			],
+			[
+				"co",
+				"color"
+			],
+			[
+				"fo",
+				"font-weight"
+			],
+			[
+				"m",
+				"margin"
+			],
+			[
+				"ho",
+				"home-link"
+			],
+			[
+				"max",
+				"max-width"
+			],
+			[
+				"nav-",
+				"nav-toggle"
+			],
+			[
+				"font-",
+				"font-family"
+			],
+			[
+				"te",
+				"text-decoration"
+			],
+			[
+				"c",
+				"color"
+			],
+			[
+				"inl",
+				"inline-block"
+			],
+			[
+				"in",
+				"inline"
+			],
+			[
+				"ev",
+				"event-date"
+			],
+			[
+				"site",
+				"site-header"
+			],
+			[
+				"sinle",
+				"single-post"
+			],
+			[
+				"rep",
+				"repeat-y"
+			],
+			[
+				"entry",
+				"entry-title"
+			],
+			[
+				"first",
+				"first-child"
+			],
+			[
+				"mat",
+				"margin-left"
+			],
+			[
+				"p",
+				"padding"
+			],
+			[
+				"entr",
+				"entry-title"
+			],
+			[
+				"res",
+				"reseller"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "add-edit-product/index.html",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/tomprior/Projects/makemedia-2014-pre-git/css/main.css",
+		"/Users/tomprior/Projects/makemedia-2014-pre-git/css/main-min.css",
+		"/Users/tomprior/Projects/makemedia-2014-pre-git/error.php",
+		"/Users/tomprior/Projects/makemedia-2014-pre-git/team/index.php",
+		"/Users/tomprior/Projects/makemedia-2014-pre-git/404.php",
+		"/Users/tomprior/Projects/makemedia-2014-pre-git/jobs/index.php",
+		"/Users/tomprior/Desktop/DT- JULY2014/wp_live_Makemedia_20140422.sql",
+		"/Users/tomprior/Downloads/db487605900_db_1and1_com.sql",
+		"/Users/tomprior/Projects/makemedia-2014-pre-git/work/act-blsc/index.php",
+		"/Users/tomprior/Projects/makemedia-2014-pre-git/work/rs-racer/index.php",
+		"/Users/tomprior/Projects/makemedia-2014-pre-git/work/ijonline/index.php",
+		"/Users/tomprior/Projects/makemedia-2014-pre-git/inc/header-nav.php",
+		"/Users/tomprior/Projects/makemedia-2014-pre-git/css/responsive-nav.css",
+		"/Users/tomprior/Projects/makemedia-2014-pre-git/work/farmers-weekly-suppliers/index.php",
+		"/Users/tomprior/Projects/makemedia-2014-pre-git/work/link/index.php",
+		"/Users/tomprior/Projects/makemedia-2014-pre-git/index.php",
+		"/Users/tomprior/Projects/makemedia-2014-pre-git/work/stadium-explorer/index.php",
+		"/Users/tomprior/Projects/makemedia-2014-pre-git/work/jarrow/index.php",
+		"/Users/tomprior/Projects/makemedia-2014-pre-git/work/exemplar/index.php",
+		"/Users/tomprior/Projects/makemedia-2014-pre-git/contact/index.php",
+		"/Users/tomprior/Projects/makemedia-2014-pre-git/work/index.php",
+		"/Users/tomprior/Projects/makemedia-2014-pre-git/blog/wp-content/themes/principles/responsive.css",
+		"/Users/tomprior/Projects/makemedia-2014-pre-git/inc/latest-news.php",
+		"/Users/tomprior/Projects/makemedia-2014-pre-git/inc/footer.php",
+		"/Users/tomprior/Projects/makemedia-2014-pre-git/inc/scripts.php",
+		"/Users/tomprior/Projects/makemedia-2014-pre-git/js/responsive-nav.js",
+		"/Users/tomprior/Projects/makemedia-2014-pre-git/inc/head.php",
+		"/Users/tomprior/Projects/makemedia-2014-pre-git/blog/wp-content/themes/principles/header.php",
+		"/Users/tomprior/Projects/makemedia-2014-pre-git/about/index.php",
+		"/Users/tomprior/Projects/makemedia-2014/team/index.php",
+		"/Users/tomprior/Projects/makemedia-2014/work/act-blsc/index.php",
+		"/Users/tomprior/Projects/makemedia-2014/work/rs-racer/index.php",
+		"/Users/tomprior/Projects/makemedia-2014/index.php",
+		"/Users/tomprior/Projects/makemedia-2014/work/index.php",
+		"/Users/tomprior/Projects/makemedia-2014/css/main.css",
+		"/Users/tomprior/Projects/makemedia-2014/work/exemplar/index.php",
+		"/Users/tomprior/Projects/makemedia-2014/work/jarrow/index.php",
+		"/Users/tomprior/Projects/makemedia-2014/work/stadium-explorer/index.php",
+		"/Users/tomprior/Projects/makemedia-2014/casestudies/act-blsc/index.php",
+		"/Users/tomprior/Projects/makemedia-2014/inc/header-nav.php",
+		"/Users/tomprior/Projects/makemedia-2014/casestudies/index.php",
+		"/Users/tomprior/Projects/makemedia-2014/about/index.php",
+		"/Users/tomprior/Projects/makemedia-2014/contact/index.php",
+		"/Users/tomprior/Projects/makemedia-2014/styleguide/index.php",
+		"/Users/tomprior/Projects/makemedia-2014/.DS_Store",
+		"/Users/tomprior/Projects/makemedia-2014/act-blsc.php",
+		"/Users/tomprior/Projects/makemedia-2014/casestudies/.DS_Store",
+		"/Users/tomprior/Projects/makemedia-2014/casestudies/act-blsc/.DS_Store",
+		"/Users/tomprior/Projects/makemedia-2014/casestudy.php",
+		"/Users/tomprior/Projects/makemedia-2014/contact.php",
+		"/Users/tomprior/Projects/makemedia-2014/index-static.html",
+		"/Users/tomprior/Projects/makemedia-2014/mm2-14.sublime-project",
+		"/Users/tomprior/Projects/makemedia-2014/mm2-14.sublime-workspace",
+		"/Users/tomprior/Projects/makemedia-2014/styleguide.php",
+		"/Users/tomprior/Projects/makemedia-2014/css/responsive-nav.css",
+		"/Users/tomprior/Projects/makemedia-2014/team.php",
+		"/Users/tomprior/Projects/makemedia-2014/inc/latest-news.php",
+		"/Users/tomprior/Projects/makemedia-2014/inc/scripts.php",
+		"/Users/tomprior/Projects/makemedia-2014/inc/head.php",
+		"/Users/tomprior/Projects/makemedia-2014/img/case-study-content/blsc/BLSC Centre.jpg",
+		"/Users/tomprior/Downloads/Cannes Lions archive kick off meeting notes.md",
+		"/Users/tomprior/Projects/makemedia-2014/css/reset.css",
+		"/Users/tomprior/Projects/makemedia-2014/inc/footer.php",
+		"/Users/tomprior/Projects/makemedia-2014/about.php",
+		"/Users/tomprior/Desktop/DTMARCH14/canneslions-old/prototype/index.php",
+		"/Users/tomprior/Desktop/DTMARCH14/canneslions-old/prototype/inc/campaign-listing-single.php",
+		"/Users/tomprior/Desktop/canneslions/prototype/index.php",
+		"/Users/tomprior/Desktop/canneslions/prototype/css/component-collections.css",
+		"/Users/tomprior/Desktop/canneslions/prototype/css/component-filters.css",
+		"/Users/tomprior/Desktop/canneslions/prototype/css/component-modal.css",
+		"/Users/tomprior/Desktop/canneslions/prototype/css/component-sticky-nav.css",
+		"/Users/tomprior/Downloads/FullscreenOverlayStyles/index7.html",
+		"/Users/tomprior/Desktop/canneslions/prototype/inc/head.php",
+		"/Users/tomprior/Desktop/canneslions/prototype/inc/scripts.php",
+		"/Users/tomprior/Desktop/canneslions/prototype/inc/modal-filters.php",
+		"/Users/tomprior/Desktop/canneslions/prototype/inc/search-results.php",
+		"/Users/tomprior/Desktop/canneslions/prototype/inc/campaign-listing-single.php",
+		"/Users/tomprior/Desktop/canneslions/prototype/css/search-results.css",
+		"/Users/tomprior/Desktop/canneslions/prototype/css/default.css",
+		"/Users/tomprior/Desktop/canneslions/prototype/css/cla-specific.css",
+		"/Users/tomprior/Desktop/canneslions/prototype/inc/search-filters.php",
+		"/Users/tomprior/Desktop/canneslions/prototype/inc/header-bar.php",
+		"/Users/tomprior/Downloads/ModalWindowEffects/index.html",
+		"/Users/tomprior/Desktop/canneslions/prototype/inc/collections.php",
+		"/Users/tomprior/Desktop/canneslions/prototype/inc/collections",
+		"/Users/tomprior/Downloads/PageTransitions 2/index.html",
+		"/Users/tomprior/Desktop/canneslions/prototype/inc/sidebar-button.php",
+		"/Users/tomprior/Downloads/ResponsiveFullWidthGrid/index.html",
+		"/Users/tomprior/Desktop/canneslions/prototype/css/reset.css",
+		"/Users/tomprior/Downloads/SlidePushMenus 2/index.html",
+		"/Users/tomprior/Downloads/AnimatedHeader 3/index.html",
+		"/Users/tomprior/Desktop/canneslions/prototype/README.md",
+		"/Users/tomprior/Desktop/collated/misc-archived/.htpasswd",
+		"/Users/tomprior/Desktop/collated/misc-archived/.htaccess",
+		"/Users/tomprior/Desktop/collated/cl-task/css/gocars.css",
+		"/Users/tomprior/Desktop/collated/misc-archived/index.php",
+		"/Users/tomprior/Desktop/collated/cl-task/index.html",
+		"/Users/tomprior/Projects/DesignSparkWebsite/trunk/app/webroot/js/script.js",
+		"/Users/tomprior/Desktop/mm_sig_v3.html",
+		"/Users/tomprior/Projects/DesignSparkWebsite/trunk/app/webroot/css/theme.css",
+		"/Applications/AMPPS/www/index.php",
+		"/Applications/AMPPS/www/about/index.php",
+		"/Applications/AMPPS/www/inc/footer.php",
+		"/Users/tomprior/Documents/AreaSq/02 Working Files/03 Design/design-phase3/homepage-html/css/component.css",
+		"/Users/tomprior/Documents/AreaSq/02 Working Files/03 Design/design-phase3/homepage-html/index.html",
+		"/Users/tomprior/Projects/DesignSparkWebsite/trunk/app/View/Elements/admin/navigation.ctp",
+		"/Users/tomprior/Projects/DesignSparkWebsite/trunk/app/webroot/forum_admin/forum_header.php",
+		"/Users/tomprior/Projects/DesignSparkWebsite/trunk/app/webroot/css/admin.css",
+		"/Users/tomprior/Projects/DesignSparkWebsite/trunk/app/webroot/css/960.css",
+		"/Users/tomprior/Projects/uxcampbri/wp-config.php",
+		"/Users/tomprior/Projects/DesignSparkWebsite/trunk/app/webroot/css/custom-fonts.css",
+		"/Users/tomprior/Projects/damovo.com 21-8-13/images/flags/_notes/dwsync.xml",
+		"/Users/tomprior/Projects/damovo.com 21-8-13/mexico.html",
+		"/Users/tomprior/Projects/damovo.com 21-8-13/media-contact.html",
+		"/Users/tomprior/Projects/damovo.com 21-8-13/vision-mission.html",
+		"/Users/tomprior/Projects/damovo.com 21-8-13/damovo-group-privacy.html",
+		"/Users/tomprior/Projects/damovo.com 21-8-13/damovo-group-news.html",
+		"/Users/tomprior/Projects/damovo.com 21-8-13/damovo-group-legal.html",
+		"/Users/tomprior/Projects/damovo.com 21-8-13/contact-us.html",
+		"/Users/tomprior/Projects/damovo.com 21-8-13/css/damovo_main.css",
+		"/Users/tomprior/Projects/damovo.com 21-8-13/css/damovo_homepage.css",
+		"/Users/tomprior/Projects/damovo.com 21-8-13/countries.html",
+		"/Users/tomprior/Projects/damovo.com 21-8-13/_right.html",
+		"/Users/tomprior/Projects/damovo.com 21-8-13/_left.html",
+		"/Users/tomprior/Projects/damovo.com 21-8-13/management-team.html",
+		"/Users/tomprior/Projects/damovo.com 21-8-13/aboutus.html",
+		"/Users/tomprior/Projects/damovo.com 21-8-13/international-services.html",
+		"/Users/tomprior/Projects/damovo.com 21-8-13/international-services-portfolio.html"
+	],
+	"find":
+	{
+		"height": 56.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			"",
+			"<open files>",
+			"",
+			"/Users/tomprior/Projects/damovo.com 21-8-13",
+			"/Users/tomprior/Projects/DesignSparkWebsite,/Users/tomprior/Projects/damovo.com 21-8-13/",
+			"/Users/tomprior/Projects/DesignSparkWebsite"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"logo",
+			"min-height",
+			"homepage",
+			"back-to-top",
+			"hover",
+			"tagline",
+			"max-height",
+			".js .nav-collapse-0.opened",
+			"selling-points",
+			".main-content .project-highlights p",
+			".masthead",
+			".main-content .project-highlights p",
+			".case-study .hero-message header h1",
+			"h3",
+			".hero-message header",
+			".masthead .hero-message header",
+			".masthead .hero-message header h1",
+			".nav-collapse li",
+			".nav-collapse li a",
+			".work .main-content .full-width-container h3",
+			"selling-p",
+			"full-width",
+			"full-width-",
+			"<img src=\"/img/example-team-member-thumb.jpg\">",
+			"border-top",
+			"our-projects",
+			"cite",
+			"heigh",
+			".nav-collapse li",
+			"small",
+			"img",
+			"h3",
+			"h1",
+			".container",
+			"div.container",
+			".js",
+			"shadow",
+			".js",
+			".cbp-hrmenu .cbp-hrsub-inner > div a",
+			"auris fermentum sapien sed sapien blandit egestas. Nulla commodo fermentum blandit. Praesent id turpis varius, euismod turpis aliquet, ultrices est. Proin blandit aliquet vulputate. Donec vulputate arcu eget nisl fermentum, rutrum interdum sapien accumsan. Mauris et ultrices odio. Aliquam venenatis, nunc eu venenatis dignissim, erat massa hendrerit mauris, vitae ultrices tortor est sit amet purus. Morbi in felis vel est ultricies dignissim id et dolor. Mauris ac lectus eu enim rhoncus feugiat eget eget justo. Quisque vel laoreet eros, vitae volutpat eros. Proin adipiscing odio arcu, sit amet vehicula nibh viverra a. Sed aliquam feugiat dolor eu ullamcorper. Vivamus aliquam iaculis erat, non pellentesque nisi bibendum non. Nulla vitae sem et tortor pellentesque bibendum sit amet quis elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi tortor dui, tempus in porta eu, vehicula pharetra enim. Vestibulum vehicula, tellus varius eleifend convallis, diam odio elementum orci, quis c",
+			"search",
+			"Lato",
+			"style=",
+			".cbp-hrmenu .cbp-hrsub",
+			"img/",
+			".cbp-af-header.cbp-af-header-shrink",
+			"event-date",
+			"site-header",
+			"page-home",
+			".site-header .entry-title",
+			"entry-cont",
+			".entry-content img",
+			"input[type=\"submit\"]",
+			"post-comment",
+			"page-title",
+			"footer",
+			".main-navigation",
+			"entry-meta",
+			"entrt-meta",
+			"comments-link",
+			".sidebar .entry-content",
+			"icon",
+			"site-header",
+			".main-navigation",
+			"site-header",
+			"leave a comment",
+			".archive-title",
+			".archive-title, .archive-meta",
+			"entry-title",
+			"h4",
+			"h5",
+			"background: #e05d22;",
+			"pink",
+			"hover",
+			".nav-menu li a:hover",
+			".nav-menu li:hover > a, .nav-menu li a:hover",
+			"000",
+			".current_page_item > a",
+			"what-to",
+			"pink",
+			".comment-reply-title,",
+			".comment-respond",
+			".comment-reply-title",
+			".nav-menu .current_page_item > a",
+			".page-about .nav-menu .current_page_item > a",
+			", .page-about .nav-menu .current_page_item > a",
+			"pink",
+			"h1.entry-title",
+			"header",
+			"vision",
+			".site",
+			"body",
+			".site",
+			"body",
+			".site",
+			"header-pink",
+			"pink-header",
+			"header",
+			".entry-meta",
+			"h1",
+			"entry-title",
+			"h1",
+			".widget .widget-title",
+			".nav-menu li a",
+			"navbar",
+			"nav-bar",
+			".site",
+			".entry-header",
+			"entry-content",
+			"padding: 0 376px 0 60px;",
+			".nav-menu li a",
+			".entry-content",
+			"current-item",
+			".nav-menu .current_page_item > a, .nav-menu .current_page_ancestor > a, .nav-menu .current-menu-item > a, .nav-menu .current-menu-ancestor > a",
+			"home-link",
+			"entry-content",
+			"body",
+			"entry-content",
+			".site-header",
+			".site-title",
+			"nav-",
+			".nav-menu li a",
+			"home-link",
+			"site-header",
+			"site-title",
+			"strong",
+			"h1",
+			"font-weight"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"<img src=\"/img/team-thumbs/robin-scott-thumb.jpg\">",
+			"Rambla",
+			"../img/",
+			"\"freight-sans-pro\"",
+			"<body onload=\"MM_preloadImages('images/flags/brazil-colour.jpg','images/flags/DEU-colour.jpg','images/flags/IR-colour.jpg','images/flags/MEX-colour.jpg','images/flags/POL-colour.jpg','images/flags/CHE-colour.jpg','images/flags/UK-colour.jpg','images/flags/belgium-colour.jpg','images/flags/nl-colour.jpg')\"> ",
+			"<body onload=\"MM_preloadImages('images/flags/belgium-colour.jpg','images/flags/IR-colour.jpg','images/flags/MEX-colour.jpg','images/flags/POL-colour.jpg','images/flags/CHE-colour.jpg','images/flags/UK-colour.jpg')\">"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "add-edit-product/index.html",
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 262.0,
+	"status_bar_visible": true
+}
