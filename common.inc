@@ -1,5 +1,5 @@
 <?php
-
+        require 'Config.php';
         require 'UserDB.php';
         require 'Database.php';
         

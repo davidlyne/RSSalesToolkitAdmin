@@ -1,5 +1,4 @@
 <?php
-
 /* 
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -8,15 +7,11 @@
 
 class Database {
     
-    private static $_dbname = 'salestoolkit';
-    private static $_servername = 'localhost';
-    private static $_dbusername = 'root';
-    private static $_dbpassword = '';
     private static $_dbconn;
     
     public static function Connect()
     {
-        Database::$_dbconn = new mysqli(Database::$_servername,Database::$_dbusername,Database::$_dbpassword);
+        Database::$_dbconn = new mysqli(Config::$MainDBServername,Config::$MainDBUsername,Config::$MainDBPassword);
        
         
         /* check connection */
@@ -25,7 +20,7 @@ class Database {
             exit();
         }
         
-        if (Database::$_dbconn->select_db(Database::$_dbname) == FALSE)
+        if (Database::$_dbconn->select_db(Config::$MainDBName) == FALSE)
         {
             printf("Failed to connect to db\n");
             exit();

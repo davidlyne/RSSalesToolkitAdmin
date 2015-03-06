@@ -8,16 +8,12 @@
 
 class UserDB {
  
-    private static $_dbname = 'dsmarketingassetbooking';
-    private static $_servername = 'localhost';
-    private static $_dbusername = 'root';
-    private static $_dbpassword = '';
     private static $_dbconn;
     public static $salt = "C93x9ANe"; // Must be the same as booking system
     
     private static function connectDB()
     {
-        UserDB::$_dbconn = new mysqli(UserDB::$_servername,UserDB::$_dbusername,UserDB::$_dbpassword);
+        UserDB::$_dbconn = new mysqli(Config::$UserDBServername,Config::$UserDBUsername,Config::$UserDBPassword);
        
         
         /* check connection */
@@ -26,7 +22,7 @@ class UserDB {
             exit();
         }
         
-        if (UserDB::$_dbconn->select_db(UserDB::$_dbname) == FALSE)
+        if (UserDB::$_dbconn->select_db(Config::$UserDBName) == FALSE)
         {
             printf("Connect to select db\n");
             exit();
