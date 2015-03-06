@@ -23,14 +23,15 @@
 	$supplieropportunitiesEdit = $adminPage."?NAV=SOADMIN&SOTOOL=SUPPLIEROPPORTUNITIESEDIT";
 	
 	
-	$designTools = [
+	$designTools = array(
     0 => "DS PCB",
     1 => "DS Mechanical",
 	2 => "DS ModelSource",
 	3 => "DesignSpark",
 	4 => "RS ToolBox",
 	5 => "DS DesignShare",
-	];
+	);
+
 
         Database::connect();
 	
